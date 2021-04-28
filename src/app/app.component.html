@@ -1,4 +1,16 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<h2>Rest implemetation</h2>
+
+
+
+<h2>Graphql implemetation</h2>
+<div *ngIf="loading">
+  Loading...
+</div>
+<div *ngIf="error">
+  Error :(
+</div>
+<div *ngIf="rates">
+  <div *ngFor="let rate of rates">
+    <p>{{ rate.currency }}: {{ rate.rate }}</p>
+  </div>
+</div>

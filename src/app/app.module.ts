@@ -10,7 +10,7 @@ import { AppComponent } from "./app.component";
 import { HelloComponent } from "./hello.component";
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [
     {
       provide: APOLLO_OPTIONS,
@@ -18,7 +18,7 @@ import { HelloComponent } from "./hello.component";
         return {
           cache: new InMemoryCache(),
           link: httpLink.create({
-            uri: "https://48p1r2roz4.sse.codesandbox.io"
+            uri: "https://graphqlzero.almansi.me/api"
           })
         };
       },
