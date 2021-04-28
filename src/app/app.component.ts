@@ -11,7 +11,7 @@ export class AppComponent {
   public restData: Data[] = [];
   public graphQlData: Data[] = [];
   constructor(private http: HttpClient, private apollo: Apollo) {
-    // REST API fetch, serer has all the control on what data to present
+    // REST API fetch, server has all the control on what data to present
     this.http
       .get("https://jsonplaceholder.typicode.com/posts")
       .toPromise()
@@ -22,7 +22,7 @@ export class AppComponent {
         }        
       });
 
-// Graphql Fetch, User has all the control what date needs to be fetched
+// Graphql Fetch, Client (App/Browser) has all the control what date needs to be fetched
     this.apollo
       .watchQuery({
         query: gql`
